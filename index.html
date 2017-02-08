@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DHIS Bulletin</title>
+
+        <meta name="description" content="DHIS 2">
+        <meta name="keywords" content="DHIS 2">        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">              
+
+        <script type="text/javascript" src="../../../dhis-web-commons/javascripts/jQuery/jquery.min.js"></script>
+        <script type="text/javascript" src="../../../dhis-web-commons/javascripts/jQuery/ui/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../../../dhis-web-commons/javascripts/jQuery/jquery.plugin.min.js"></script>
+
+        <link type="text/css" rel="stylesheet" href="../../../dhis-web-commons/javascripts/jQuery/ui/css/redmond/jquery-ui.css">
+
+        <script type="text/javascript" src="../../../dhis-web-commons/bootstrap/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../../dhis-web-commons/bootstrap/css/bootstrap.min.css">
+
+        <script type="text/javascript" src="../../../dhis-web-commons/javascripts/underscore.min.js"></script>
+
+        <!-- dhis2 plugin dependencies -->
+		<link rel="stylesheet" type="text/css" href="http://dhis2-cdn.org/v221/ext/resources/css/ext-plugin-gray.css" />
+		<script src="https://dhis2-cdn.org/v221/ext/ext-all.js"></script>
+		<script src="https://dhis2-cdn.org/v221/plugin/table.js"></script>
+		<script src="http://dhis2-cdn.org/v221/plugin/chart.js"></script>
+
+        <!-- saveSvgAsPng -->
+        <script type="text/javascript" src="js/saveSvgAsPng.js"></script>
+        <script type="text/javascript" src="js/html2canvas.js"></script>
+
+
+		<script type="text/javascript" src="js/dhis-bulletin.js"></script>
+
+        <!-- css -->
+        <link type="text/css" rel="stylesheet" href="css/dhis-bulletin.css">
+		
+		
+		
+		
+
+    </head>
+    <body>
+	<style>
+		.pivot td {
+			font-family: arial, sans-serif, helvetica neue, helvetica !important;
+			padding: 5px;
+			border: 1px solid #b2b2b2;
+			font-size: 8px;
+			width:22px;
+			color:black;
+			height:10px;
+			}
+		.Header{
+			background-color:#6699FF;
+			font-family:verdana;
+			}
+		#pagecontent {
+			width:100%;
+		}
+		textarea {
+			background-color:#C7D3E9;
+			border:none;
+		}
+		</style>
+
+        <!-- bulletin template -->
+      
+
+                <!-- navigation UI component -->
+              
+        <!-- actual bulletin -->
+        <div id="dhisBulletin">
+            <div id="page-container"></div>
+
+            <!-- settings dialog -->
+            <div id="settings-form" title="Bulletin Settings">
+                <form>
+                    <fieldset>
+                        <label for="districtNameStng">Select District : </label>
+                		
+						<select id="dropdown" style="color: #0000FF"  name="districtNameStng" value="Varanasi" height="10px" width="10px" class="text ui-widget-content ui-corner-all">
+						<option value="selected"> Please Select District </option>
+						<option value="Agra"> Agra</option>
+						<option value="Allahabad"> Allahabad</option>
+						<option value=" Aligarh"> Aligarh</option>
+						<option value="Azamgarh"> Azamgarh</option>
+						<option value="Bareilly"> Bareilly</option>
+						<option value="Basti"> Basti</option>
+						<option value="Chitrakoot">Chitrakoot</option>
+						<option value="Faizabad"> Faizabad</option>
+						<option value="Gonda"> Gonda</option>
+						<option value="Gorakhpur">Gorakhpur</option>
+						<option value="Jhansi"> Jhansi</option>
+						<option value="Kanpur"> Kanpur</option>
+						<option value="Lucknow"> Lucknow</option>
+						<option value="Meerut"> Meerut</option>
+						<option value="Mirzapur">Mirzapur</option>
+						<option value="Moradabad"> Moradabad</option>
+						<option value="Saharanpur">Saharanpur</option>
+						<option value="Varanasi"> Varanasi</option>
+				</select>
+                        <br>
+                        <label for="volumeStng">Choose Volume : </label>
+                        <input type="number" name="volumeStng" id="volumeStng" value="1" class="number ui-widget-content ui-corner-all" style="height:20px;width:40px;">
+                    </fieldset>
+                </form>
+            </div>
+
+            <!-- ignore page buttons -->
+            <div id="ignorePage">
+                ignore this page ?
+                <input type="radio" name="ignorePage" value="yes">Yes</input>
+                <input type="radio" name="ignorePage" value="no">No</input>
+            </div>
+        </div>
+
+    </body>
+</html>

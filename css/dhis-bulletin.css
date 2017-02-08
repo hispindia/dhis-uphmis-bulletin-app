@@ -1,0 +1,142 @@
+body {
+    background-color: lightgray;
+	-webkit-print-color-adjust: exact;
+}
+
+.page {
+	
+     width: 29.7cm ;
+	min-height: 21cm;
+    padding: 2cm;
+    margin: 1cm auto;
+    border: 1px #D3D3D3 solid;
+    border-radius: 5px;
+    background: white;
+	overflow:visible;
+
+}
+
+.pivot td {
+	/*vicky*/
+    font-family: arial, sans-serif, helvetica neue, helvetica !important;
+    padding: 5px;
+    border: 1px solid #b2b2b2;
+    font-size: 8px;
+}
+
+.dbItemDiv {
+
+    min-width: 410px;
+    min-height: 275px;
+
+    margin: 2px;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.hidden{
+    display:none;
+}
+
+
+
+.page-title {
+
+    text-align: center;
+}
+
+.moveable {
+    position: relative;
+}
+
+
+.text-center {
+    text-align:center;
+}
+.front-page *{
+    margin-top:6px;
+    margin-bottom:6px;
+}
+
+
+
+#content-table, #content-table th, #content-table td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+#content-table th, #content-table td {
+    padding: 5px;
+}
+#content-table .page-name-row {
+    background-color: powderblue;
+    font-weight: bold;
+}
+
+
+.ignored {
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.5;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+@media print {
+    .page {
+        overflow: hidden;
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+      min-height: initial ;
+		width: intial;
+        box-shadow: initial;
+        page-break-after: always;
+
+    }
+	.Header{
+	background-color:#6699FF !important;
+	font-family:verdana !important;
+	}
+	.headingName {
+		color:White !important;	
+	}
+	
+	#content-table .page-name-row {
+    background-color: powderblue !important;
+    font-weight: bold !important;
+	}
+	#HMIS, .NHM {
+		color:red !important;
+	}
+	 .districtText , #districtName {
+		 color:green !important;
+	 }
+	 .printDur , h1{
+		 color:purple !important;
+	 }
+	 #navig {
+		 display:none !important;
+	 }
+	 #ignorePage {
+		 display:none !important;
+		 
+	 }
+	 textarea {
+			background-color:#C7D3E9 !important;
+			border:none !important;
+		}
+	.pivot-dim {
+    background-color: #dae6f8 !important;
+    text-align: center !important;
+}
+	.pivot-dim-label {
+    background-color: #cddaed !important;
+    text-align: center !important;
+}
+	#services {
+		background-color:#99ffbb !important;
+	}
+
+
+}
